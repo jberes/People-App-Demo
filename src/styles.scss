@@ -6,7 +6,13 @@
 
 @include igx-core();
 @include igx-typography();
-@include igx-light-theme($light-material-palette);
+
+$custom-palette: igx-palette(
+  $primary: #09f,
+  $secondary: #72da67,
+  $surface: #222222,
+  $grays: #FFFFFF);
+@include igx-theme($palette: $custom-palette, $schema: $dark-material-schema);
 
 body {
   background: hsla(var(--igx-surface-500));
